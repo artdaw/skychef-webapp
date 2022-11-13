@@ -8,7 +8,15 @@ import { Button } from "@mui/material";
 
 export default function Home() {
   const { near } = useWallet();
-  const isSignedIn = near?.wallet.accountId;
+  const [isSignedIn, setIsSigned] = React.useState<boolean | undefined>(false);
+
+  React.useEffect(() => {
+    async function initWallet() {
+      const signed = await near?.wallet.startUp();
+      setIsSigned(signed)
+    }
+    initWallet();
+  });
 
   return (
     <>

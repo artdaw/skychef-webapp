@@ -18,11 +18,11 @@ const NO_DEPOSIT = "0";
 
 // Wallet that simplifies using the wallet selector
 export class Wallet {
-  walletSelector?: WalletSelector;
-  wallet: NearWallet | undefined;
-  network: Network | NetworkId;
-  createAccessKeyFor: string | undefined;
-  accountId?: string;
+  public walletSelector?: WalletSelector;
+  public wallet: NearWallet | undefined;
+  public network: Network | NetworkId;
+  public createAccessKeyFor: string | undefined;
+  public accountId?: string;
 
   constructor({
     createAccessKeyFor = undefined,

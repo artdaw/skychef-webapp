@@ -27,13 +27,6 @@ export default function App(props: AppProps) {
   // @ts-ignore
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
-  React.useEffect(() => {
-    async function initWallet() {
-      await nftNEAR?.wallet.startUp();
-    }
-    initWallet();
-  }, []);
-
   return (
     <CacheProvider value={emotionCache}>
       <Head>
