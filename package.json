@@ -5,8 +5,8 @@
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
     "dev": "cd packages/webapp && pnpm dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "cd packages/webapp && pnpm build",
+    "start": "cd packages/webapp && pnpm start",
+    "lint": "cd packages/webapp && pnpm lint"
   }
 }
