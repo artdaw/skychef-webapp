@@ -1,0 +1,11 @@
+{
+  "name": "react-near",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+  },
+  "devDependencies": {
+    "typescript": "4.8.4"
+  }
+}
