@@ -14,11 +14,12 @@ export const inter = Inter({
 export const theme = responsiveFontSizes(
   createTheme({
     palette: {
+      mode: 'dark',
       background: { default: "#0F172A" },
       primary: {
         main: "#20a4f3",
         light: "#6ed5ff",
-        dark: "#0076c0",
+        dark: "#0F172A",
       },
       error: {
         main: red.A400,

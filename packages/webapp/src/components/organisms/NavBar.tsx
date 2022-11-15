@@ -15,6 +15,7 @@ import { NextRouter } from "next/router";
 import { SignInButton } from "../atoms/SignInButton";
 import { Balance } from "./Balance";
 import { Divider } from "@mui/material";
+import Link from "next/link";
 
 const settings = ["Logout"];
 
@@ -55,10 +56,14 @@ export const NavBar = ({
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-            <Image src={SkychefLogo} alt="Skychef logo" width={139} />
+            <Link href="/">
+              <Image src={SkychefLogo} alt="Skychef logo" width={139} />
+            </Link>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <Image src={SkychefLogo} alt="Skychef logo" width={139} />
+            <Link href="/">
+              <Image src={SkychefLogo} alt="Skychef logo" width={139} />
+            </Link>
           </Box>
           {!isLogged && (
             <Box sx={{ display: "flex", justifyContent: "end", flexGrow: 1 }}>
