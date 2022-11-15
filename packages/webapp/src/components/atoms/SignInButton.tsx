@@ -1,12 +1,13 @@
-import { Button } from "@mui/material";
+import { Button, SxProps } from "@mui/material";
 import React from "react";
-import { useNear } from "../wallet/nearHooks";
+import { useNear } from "../../wallet/nearHooks";
 
 type SignInButtonProps = {
   children: string;
+  sx?: SxProps;
 };
 
-export const SignInButton = ({ children }: SignInButtonProps) => {
+export const SignInButton = ({ children, sx }: SignInButtonProps) => {
   const { wallet } = useNear();
   // TODO: add contractId and methodNames
   const signIn = () => wallet?.requestSignIn({
@@ -17,7 +18,7 @@ export const SignInButton = ({ children }: SignInButtonProps) => {
   return wallet?.isSignedIn() ? (
     <p>{wallet.getAccountId()}</p>
   ) : (
-    <Button variant="contained" onClick={() => signIn()}>
+    <Button sx={sx} variant="contained" onClick={() => signIn()}>
       {children}
     </Button>
   );

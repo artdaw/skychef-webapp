@@ -1,9 +1,14 @@
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { useContract, useNear } from "../wallet/nearHooks";
-import { utils } from 'near-api-js';
+import { useContract, useNear } from "../../wallet/nearHooks";
+import { utils } from "near-api-js";
+import { SxProps } from "@mui/material";
 
-export const Balance = () => {
+type BalanceProps = {
+  sx?: SxProps;
+};
+
+export const Balance = ({ sx }: BalanceProps) => {
   // Here we define the contract configuration and get a contract object.
   const contract = useContract({
     contractId: "wrap.testnet",
@@ -38,8 +43,8 @@ export const Balance = () => {
   }, [wallet, contract, near]);
   // This will display the available wNEAR balance of the currently signed in account
   return wallet?.isSignedIn() ? (
-    <Typography variant="body2">
-      Your balance {balance} NEAR
+    <Typography variant="body2" fontWeight={900} sx={sx}>
+      {balance} NEAR
     </Typography>
   ) : null;
 };
