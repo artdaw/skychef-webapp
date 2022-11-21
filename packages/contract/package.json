@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "license": "(MIT AND Apache-2.0)",
+  "type": "module",
   "scripts": {
+    "build:nft": "pnpm near-sdk-js build src/index.ts build/nft.wasm"
+  },
+  "dependencies": {
+    "near-sdk-js": "0.6.0",
+    "ts-morph": "17.0.0"
   },
   "devDependencies": {
     "near-cli": "3.4.2",
