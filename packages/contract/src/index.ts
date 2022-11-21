@@ -28,7 +28,7 @@ import {
 
 @NearBindgen({})
 export class SkyChefNFTContract {
-  ownerId: string;
+  owner_id: string;
   tokensPerOwner: LookupMap<any>;
   tokensById: LookupMap<any>;
   tokenMetadataById: UnorderedMap<any>;
@@ -43,7 +43,7 @@ export class SkyChefNFTContract {
     },
   }) {
     // super();
-    this.ownerId = owner_id;
+    this.owner_id = owner_id;
     this.tokensPerOwner = new LookupMap("tokensPerOwner");
     this.tokensById = new LookupMap("tokensById");
     this.tokenMetadataById = new UnorderedMap("tokenMetadataById");
