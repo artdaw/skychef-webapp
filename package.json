@@ -2,7 +2,7 @@
   "name": "skychef",
   "version": "0.1.0",
   "private": true,
-  "license": "(MIT AND Apache-2.0)",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "cd packages/webapp && pnpm dev",
     "build": "cd packages/webapp && pnpm build",
